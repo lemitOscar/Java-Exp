@@ -38,16 +38,24 @@ public class LibroCalificaciones {
 
     }
     /*
-    * s para las cadenas
-    * d para los enteros
-    * n para salto de linea
-    * f para los decimales
-    * */
+     * s para las cadenas
+     * d para los enteros
+     * n para salto de linea
+     * f para los decimales
+     * */
 
     private void imprimirCalificaiones() {
         System.out.println("...... imprimir calificaciones ............");
-        for (int i = 0; i <calificaciones[0].length ; i++) {
-            System.out.printf("Prueba %d ",i+1);
+        for (int i = 0; i < calificaciones[0].length; i++) {
+            System.out.printf("          Prueba %d ", i + 1);
+        }
+
+        //filas y columnas de los estudiantes
+        for (int i = 0; i < calificaciones.length; i++) {
+            System.out.printf("%n Estudiate %d ", i + 1);
+            for (int nota : calificaciones[i]) {
+                System.out.printf(" %d ",nota);
+            }
         }
     }
 
